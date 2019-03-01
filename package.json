@@ -1,0 +1,28 @@
+{
+  "name": "gamemate",
+  "version": "1.0.0",
+  "description": "Dating website to find your gamer buddy",
+  "main": "_js/index.js",
+  "scripts": {
+    "start": "nodemon _js/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RooyyDoe/project-tech.git"
+  },
+  "keywords": [
+    "Dating",
+    "Gaming",
+    "Mates"
+  ],
+  "author": "Roy Kuijper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RooyyDoe/project-tech/issues"
+  },
+  "homepage": "https://github.com/RooyyDoe/project-tech#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
