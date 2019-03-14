@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.use(express.static('static'))
-app.set('view engine', 'pug')
-app.use('/static', express.static('static'))p
+
+app.
+    use(express.static('static'))
+    set('view engine', 'pug')
+    use('/static', express.static('static'))
 
   app.get('/', function (req, res) {
     res.render('index')
@@ -28,5 +30,7 @@ if (req.accepts('html')) {
 
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, function whichPort(){
+  console.log(`Example app listening on port ${port}!`)
+}
 
