@@ -1,36 +1,27 @@
 const express = require('express')
-const app = express()
-const port = 3000
 
+express() 
+    .set('view engine', 'pug')
+    .use('/static', express.static('static'))
+    .get('/about', about)
+    .get('/', home)
+    .get('/login', login)
+    .use(notFound)
+    .listen(3000)
 
-app.
-    use(express.static('static'))
-    set('view engine', 'pug')
-    use('/static', express.static('static'))
+    function home(req, res) {
+      res.render('index')
+    }
 
-  app.get('/', function (req, res) {
-    res.render('index')
-  })
+    function about(req, res) {
+      res.render('about')
+    }
 
-  app.get('/about', function (req, res) {
-    res.render('about')
-  })
+    function login(req, res) {
+      res.render('login')
+    }
 
-  app.get('/login', function (req, res) {
-    res.render('login')
-  })
-
-app.use(function notfound(req, res){
-  res.status(404);
-
-if (req.accepts('html')) {
-  res.render('notfound.pug');
-  return;
-  }
-
-});
-
-app.listen(port, function whichPort(){
-  console.log(`Example app listening on port ${port}!`)
+function notFound(req, res) {
+  res.status(404).render('notfound.pug')
 }
 
