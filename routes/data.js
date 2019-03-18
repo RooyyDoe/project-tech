@@ -8,7 +8,7 @@ express()
     .listen(3000)
 
     function home(req, res) {
-      res.render('index')
+      res.render('../views/index.pug')
     }
 
 function notFound(req, res) {

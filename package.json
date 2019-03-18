@@ -2,9 +2,9 @@
   "name": "gamemate",
   "version": "1.0.0",
   "description": "Dating website to find your gamer buddy",
-  "main": "npmindex.js",
+  "main": "./routes/data.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon ./routes/data.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/RooyyDoe/project-tech#readme",
   "devDependencies": {
-    "eslint": "^5.15.1",
+    "eslint": "^5.15.2",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
@@ -35,7 +35,9 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "colors": "^1.3.3",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
     "pug": "^2.0.3"
   }
 }
