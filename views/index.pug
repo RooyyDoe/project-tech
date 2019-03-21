@@ -1,70 +1,52 @@
-doctype html
-html(lang="en")
-  include head
-  body
-    include nav
-    .wrap
-      .search
-        input.searchBar(type='text' placeholder='What are you looking for?')
-        button.searchButton(type='submit')
-          i.fa.fa-search
-    section
-      article
-        header
-          h2 League of Legends
-        p This is some text 
-      article
-        header
-          h2 Apex Legends
-        p This is some text
-      article
-        header
-          h2 Fortnite
-        p This is some text
-      article
-        header
-          h2 Minecraft
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
-      article
-        header
-          h2 Fifa 19
-        p This is some text
+include head
+body
+  include nav
+  include search
+  section
+    form(action='#')
+      .checkboxleague
+        input(type='checkbox' name='league_of_legends' value='game1' checked)
+        label(for='checkboxleague')
+        .insidecheckboxleague
+          img(src="../static/images/game_logo/logo-lol.png" alt="communitie")/
+          h2 League of legends
+          h3 185
+          img(src="../static/icon/friends.svg" alt="communitie")/
+      .checkboxapex
+        input(type='checkbox' name='apex_legends' value='game2')
+        label(for='checkboxapex')
+      .checkboxfortnite
+        input(type='checkbox' name='fortnite' value='game3')
+        label(for='checkboxfortnite')
+      .checkboxrocket  
+        input(type='checkbox' name='rocket_league' value='game4')
+        label(for='checkboxrocket')
+      .checkboxcallofduty  
+        input(type='checkbox' name='call_of_duty' value='game5')
+        label(for='checkboxcallofduty')
+      .checkboxminecraft 
+        input(type='checkbox' name='minecraft' value='game6')
+        label(for='checkboxminecraft')
+      .checkboxrainbow
+        input(type='checkbox' name='rainbow_six_siege' value='game7')
+        label(for='checkboxrainbow')
+      .checkboxdestiny
+        input(type='checkbox' name='destiny_2' value='game8')
+        label(for='checkboxdestiny')
+      .checkboxgta
+        input(type='checkbox' name='gta_5' value='game9')
+        label(for='checkboxgta')
+      .checkboxark
+        input(type='checkbox' name='ark_survival_evolved' value='game10')
+        label(for='checkboxark')
+      .checkboxrdr
+        input(type='checkbox' name='red_dead_redemption' value='game11')
+        label(for='checkboxrdr')
+      .checkboxpubg
+        input(type='checkbox' name='pubg' value='game7')
+        label(for='checkboxpubg')
+      input(type='submit' value='Submit')
+
       
         
           
