@@ -45,6 +45,7 @@ p {
 }
 
 nav {
+  z-index: 1;
   background-color: #191919;
   border-bottom: solid #2C7744;
   position: fixed;
@@ -75,14 +76,14 @@ article {
   object-fit: cover;
   max-height: 20rem;
   width: 100%;
-  margin-top: -5rem;
+  margin-top: -2rem;
 }
 
 /* ###### Search bar ###### */
   
 .searchBar {
   width: 85%;
-  margin: 7rem auto;
+  margin: 7rem auto 0rem;
   display: block;
   border: 2px solid #2C7744;
   padding: 0.625rem;
@@ -95,10 +96,67 @@ article {
     color: #00B4CC;
   }
 
-  .straightLine {
-    border-bottom: solid #2C7744;
-    margin-top: -4rem;
+  /* #### Search tags #### */
+  
+  .tags {
+    list-style: none;
+    margin: 0.5rem 0 0 1.2rem;
+    overflow: hidden; 
+    padding: 0;
   }
+
+  .tags li {
+    float: left; 
+  }
+
+  .tag {
+    z-index: 0;
+    background: linear-gradient(to right, #2C7744, #5A3F37);
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.8rem;
+    display: inline-block;
+    height: 1.5rem;
+    line-height: 1.4rem;
+    padding: 0 1rem 0 1rem;
+    position: relative;
+    margin: 0 0.5rem 0.5rem 0;
+    text-decoration: none;
+  }
+
+  .line {
+    margin-top: 0.7rem;
+    border-bottom: solid #2C7744;
+  }
+
+  /* ##### checkboxes ##### */
+
+  .image-checkbox {
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 4px solid transparent;
+    margin-bottom: 0;
+    outline: 0;
+}
+.image-checkbox input[type="checkbox"] {
+    display: none;
+}
+.image-checkbox-checked {
+    border-color: #4783B0;
+}
+.image-checkbox .glyphicon {
+  position: absolute;
+  color: #4A79A3;
+  background-color: #fff;
+  padding: 10px;
+  top: 0;
+  right: 0;
+}
+.image-checkbox-checked .glyphicon {
+  display: block !important;
+}
     <title></title>
   </style>
   <body>

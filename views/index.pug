@@ -4,48 +4,55 @@ body
   include search
   section
     form(action='#')
-      .checkboxleague
-        input(type='checkbox' name='league_of_legends' value='game1' checked)
-        label(for='checkboxleague')
-        .insidecheckboxleague
-          img(src="../static/images/game_logo/logo-lol.png" alt="communitie")/
-          h2 League of legends
-          h3 185
-          img(src="../static/icon/friends.svg" alt="communitie")/
-      .checkboxapex
-        input(type='checkbox' name='apex_legends' value='game2')
-        label(for='checkboxapex')
-      .checkboxfortnite
-        input(type='checkbox' name='fortnite' value='game3')
-        label(for='checkboxfortnite')
-      .checkboxrocket  
-        input(type='checkbox' name='rocket_league' value='game4')
-        label(for='checkboxrocket')
-      .checkboxcallofduty  
-        input(type='checkbox' name='call_of_duty' value='game5')
-        label(for='checkboxcallofduty')
-      .checkboxminecraft 
-        input(type='checkbox' name='minecraft' value='game6')
-        label(for='checkboxminecraft')
-      .checkboxrainbow
-        input(type='checkbox' name='rainbow_six_siege' value='game7')
-        label(for='checkboxrainbow')
-      .checkboxdestiny
-        input(type='checkbox' name='destiny_2' value='game8')
-        label(for='checkboxdestiny')
-      .checkboxgta
-        input(type='checkbox' name='gta_5' value='game9')
-        label(for='checkboxgta')
-      .checkboxark
-        input(type='checkbox' name='ark_survival_evolved' value='game10')
-        label(for='checkboxark')
-      .checkboxrdr
-        input(type='checkbox' name='red_dead_redemption' value='game11')
-        label(for='checkboxrdr')
-      .checkboxpubg
-        input(type='checkbox' name='pubg' value='game7')
-        label(for='checkboxpubg')
-      input(type='submit' value='Submit')
+      ul.checkboxen
+        li
+          input#checkthis1(type='checkbox')
+          label(for='checkthis1')
+            img(src='../static/images/league_of_legends.jpg')
+        li
+          input#checkthis2(type='checkbox')
+          label(for='checkthis2')
+            img(src='../static/images/apex_legends.jpg')
+        li
+          input#checkthis3(type='checkbox' checked='checked')
+          label(for='checkthis3')
+            img(src='../static/images/fortnite.jpg')
+        li
+          input#checkthis4(type='checkbox')
+          label(for='checkthis4')
+            img(src='../static/images/rocket_league.jpg')
+        li
+          input#checkthis5(type='checkbox')
+          label(for='checkthis5')
+            img(src='../static/images/call_of_duty.jpeg')
+        li
+          input#checkthis6(type='checkbox')
+          label(for='checkthis6')
+            img(src='../static/images/minecraft.jpeg')
+        li
+          input#checkthis7(type='checkbox')
+          label(for='checkthis7')
+            img(src='../static/images/rainbow-six.png') 
+        li
+          input#checkthis8(type='checkbox')
+          label(for='checkthis8')
+            img(src='../static/images/destiny.jpeg') 
+        li
+          input#checkthis9(type='checkbox')
+          label(for='checkthis9')
+            img(src='../static/images/gta_v.jpg') 
+        li
+          input#checkthis10(type='checkbox')
+          label(for='checkthis10')
+            img(src='../static/images/ark.jpeg') 
+        li
+          input#checkthis11(type='checkbox')
+          label(for='checkthis11')
+            img(src='../static/images/red_dead_redemtion.jpg')  
+        li
+          input#checkthis12(type='checkbox')
+          label(for='checkthis12')
+            img(src='../static/images/pubg.jpeg')           
 
       
         
