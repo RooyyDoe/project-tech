@@ -2,9 +2,9 @@
   "name": "gamemate",
   "version": "1.0.0",
   "description": "Dating website to find your gamer buddy",
-  "main": "./routes/data.js",
+  "main": "data.js",
   "scripts": {
-    "start": "nodemon ./routes/data.js",
+    "start": "nodemon data.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,9 +34,13 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "colors": "^1.3.3",
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "lodash": "^4.17.11",
-    "pug": "^2.0.3"
+    "mongodb": "^3.2.2",
+    "pug": "^2.0.3",
+    "slug": "^1.0.0"
   }
 }

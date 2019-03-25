@@ -41,6 +41,11 @@ p {
   font-weight: 400;
 }
 
+.notfound {
+  margin-top: 20rem;
+  text-align: center;
+}
+
 nav {
   z-index: 1;
   background-color: #191919;
@@ -185,5 +190,18 @@ article {
   ul.checkboxen :checked + label:before { 
     content: "✓"; 
     transform: scale(1); 
-    z-index: 2;
+    z-index: 0;
+  }
+
+  button {
+    width: 98%;
+    margin: 0.4rem 0 2rem 0.4rem;
+    padding: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #5A3F37 , #2C7744);
+    border: none;
+    color: white;
+    cursor: pointer;
   }
