@@ -3,7 +3,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongod = require('mongodb');
 
-
 require('dotenv').config();
 var jsonParser = bodyParser.json();
 
@@ -24,14 +23,15 @@ express()
 	.use('/static', express.static('./static'))
 	.use(bodyParser.urlencoded({extended: true}))
 	.get('/', home)
+	.get('/:_id', games)
 	.post('/', added)
 	.use(notFound)
 	.listen(3000);
 
 function added(req, res, next) {
 	db.collection('profile').updateOne(
-		{ '_id': 1},
-		{$set: {gameTags: req.body.leagueoflegends},
+		{_id: 1},
+		{$set: {gameTags: req.body.game},
 		}, done);
 	function done(err) {
 		if (err) {
@@ -40,6 +40,21 @@ function added(req, res, next) {
 		else {
 			res.render('adding/added.pug');
 		}
+	}
+}
+
+function games(req, res, next) {
+	var id = req.params.id;
+	db.collection('profile').findOne({
+	  _id: mongo.ObjectID(id),
+	}, done);
+	function done(err, data) {
+	  if (err) {
+			next(err);
+	  }
+		else {
+			res.render('myclub.pug', {data: data});
+	  }
 	}
 }
 
