@@ -8,6 +8,12 @@ The research that I did for this project is all described in the [wiki](https://
 
 When the user makes a new profile I want them to be able to add tags to there profile. So when profiles have the same tags they will match with each other. All these tags will be listed and can be found through a search bar. When the user search for a tag they can select this tag and add it to there profile. When they want to add more or delete tags they can do this on there profile.
 
+# Communication
+
+* [GitHub](https://github.com/RooyyDoe/) — Main source of information, assignments, important dates, and more
+* [Slack](https://cmda-tech.slack.com/) — General chatter and Q&A
+* [Moodle](https://moodle.cmd.hva.nl/course/view.php?id=431) — Schedulers
+
 # Installation
 
 **Clone the repository of the project**
@@ -22,6 +28,10 @@ npm install
 
 ```
 npm run start
+```
+
+```
+localhost:3000 // host is now available
 ```
 
 # Usage
