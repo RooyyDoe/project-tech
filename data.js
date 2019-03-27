@@ -2,19 +2,18 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongod = require('mongodb');
+var ObjectId = require('mongodb').ObjectID;
 
 require('dotenv').config();
-var jsonParser = bodyParser.json();
 
-// Connection will be made with the database.
+// Intialize connection to MongoDB database
 var db = null;
 var url = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT;
 
-mongod.MongoClient.connect(url, function(err, client) {
+mongod.MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
 	if (err) {
 		throw err;
 	}
-
 	db = client.db(process.env.DB_NAME);
 });
 
@@ -23,7 +22,7 @@ express()
 	.use('/static', express.static('./static'))
 	.use(bodyParser.urlencoded({extended: true}))
 	.get('/', home)
-	.get('/:_id', games)
+	.get('/:id', games)
 	.post('/', added)
 	.use(notFound)
 	.listen(3000);
@@ -33,28 +32,28 @@ function added(req, res, next) {
 		{_id: 1},
 		{$set: {gameTags: req.body.game},
 		}, done);
-	function done(err) {
+	function done(err, data) {
 		if (err) {
 			next(err);
 		}
 		else {
-			res.render('adding/added.pug');
+			res.redirect('/added');
 		}
 	}
 }
 
 function games(req, res, next) {
-	var id = req.params.id;
 	db.collection('profile').findOne({
-	  _id: mongo.ObjectID(id),
+		_id: 1,
 	}, done);
 	function done(err, data) {
-	  if (err) {
+		console.log(data)
+		if (err) {
 			next(err);
-	  }
+		}
 		else {
-			res.render('myclub.pug', {data: data});
-	  }
+			res.render('adding/added', {data: data});
+		}
 	}
 }
 

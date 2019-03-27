@@ -154,6 +154,10 @@ article {
     display: none;
   }
 
+  .test {
+    margin-top: 10rem;
+  }
+
   ul.checkboxen label { 
     display: block; 
     position: relative; 
@@ -178,6 +182,13 @@ article {
     text-align: center; 
     transition-duration: 0.4s; 
     transform: scale(0);
+  }
+
+  img {
+    object-fit: cover;
+    max-height: 40rem;
+    object-position: top;
+    width: 100%;
   }
 
   ul.checkboxen label img { 

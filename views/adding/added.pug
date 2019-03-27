@@ -3,8 +3,20 @@ body
   header
     nav
       h1 Games added!
-  section   
-    p Club: #{data.gameTags}
+  main
+    section   
+      block content
+          if data.gameTags.length
+            each game in data.gameTags
+              p.test Game: #{game}
+              img(src='../static/images/' + game.trim().toLowerCase().replace('-', '_') + '.jpeg')
+          else
+            p.test Game: #{data.gameTags}
+            img(src='../static/images/' + data.gameTag.replace('-', '_') + '.jpeg')
+          
+  include ../partials/footer.pug
+
+
 
       
         
