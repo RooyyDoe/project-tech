@@ -1,3 +1,7 @@
+// Bronnen:
+// https://github.com/cmda-bt/be-course-18-19
+// https://docs.mongodb.com/meta/
+
 /* eslint-disable func-names */
 // Require all the different packages that I use.
 var express = require('express');
@@ -57,7 +61,7 @@ function games(req, res, next) {
 			next(err);
 		}
 		else {
-			// Giving data through with the ress.render
+			// Giving data through with the res.render
 			res.render('adding/added', {data: data});
 		}
 	}
