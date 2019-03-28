@@ -4,15 +4,23 @@ body
     nav
       h1 Games added!
   main
-    section   
+    section
+      .help 
       block content
-          if data.gameTags.length
+          if data.gameTags
             each game in data.gameTags
               p.test Game: #{game}
+              //- Trimming white spaces from game data thats retrieved
+              //- Converting a string to lowercase
+
+              //- Searches for the string and then after that returns a new string where the,
+              //- specified values are replaced
               img(src='../static/images/' + game.trim().toLowerCase().replace('-', '_') + '.jpeg')
           else
-            p.test Game: #{data.gameTags}
+            //- gets the data from data.js
+            p Game: #{data.gameTags}
             img(src='../static/images/' + data.gameTag.replace('-', '_') + '.jpeg')
+      .help2
           
   include ../partials/footer.pug
 

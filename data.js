@@ -1,15 +1,14 @@
 /* eslint-disable func-names */
+// Require all the different packages that I use.
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongod = require('mongodb');
-var ObjectId = require('mongodb').ObjectID;
 
 require('dotenv').config();
 
 // Intialize connection to MongoDB database
 var db = null;
 var url = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT;
-
 mongod.MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
 	if (err) {
 		throw err;
@@ -17,6 +16,7 @@ mongod.MongoClient.connect(url, { useNewUrlParser: true }, function(err, client)
 	db = client.db(process.env.DB_NAME);
 });
 
+// This are all the routes that are in use.
 express()
 	.set('view engine', 'pug')
 	.use('/static', express.static('./static'))
@@ -27,10 +27,14 @@ express()
 	.use(notFound)
 	.listen(3000);
 
+// Function made for adding the chosen gameTags to the database tabel
 function added(req, res, next) {
+	// Query made for updating a attribute in the "profile" tabel
 	db.collection('profile').updateOne(
 		{_id: 1},
+		// Setting the gameTags input on what gets chosen in the interface.
 		{$set: {gameTags: req.body.game},
+		// Runs the done function, Error or redirect
 		}, done);
 	function done(err, data) {
 		if (err) {
@@ -41,17 +45,19 @@ function added(req, res, next) {
 		}
 	}
 }
-
+// Function made for getting the data that was added to the database with the first function
 function games(req, res, next) {
+	// Query that was made to find the profile with _id: 1
 	db.collection('profile').findOne({
 		_id: 1,
+		// Runs the done function after the query
 	}, done);
 	function done(err, data) {
-		console.log(data)
 		if (err) {
 			next(err);
 		}
 		else {
+			// Giving data through with the ress.render
 			res.render('adding/added', {data: data});
 		}
 	}

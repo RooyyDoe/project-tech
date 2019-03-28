@@ -154,10 +154,6 @@ article {
     display: none;
   }
 
-  .test {
-    margin-top: 10rem;
-  }
-
   ul.checkboxen label { 
     display: block; 
     position: relative; 
@@ -215,4 +211,12 @@ article {
     border: none;
     color: white;
     cursor: pointer;
+  }
+
+  .help {
+    padding-top: 4rem;
+  }
+  
+  .help2 {
+    padding-bottom: 4rem;
   }
