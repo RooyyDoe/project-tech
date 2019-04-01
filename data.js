@@ -7,7 +7,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongod = require('mongodb');
-
 require('dotenv').config();
 
 // Intialize connection to MongoDB database
@@ -40,7 +39,7 @@ function added(req, res, next) {
 		{$set: {gameTags: req.body.game},
 		// Runs the done function, Error or redirect
 		}, done);
-	function done(err, data) {
+	function done(err) {
 		if (err) {
 			next(err);
 		}
@@ -57,6 +56,7 @@ function games(req, res, next) {
 		// Runs the done function after the query
 	}, done);
 	function done(err, data) {
+		console.log(data);
 		if (err) {
 			next(err);
 		}
