@@ -12,12 +12,6 @@ When the user makes a new profile I want them to be able to add tags to there pr
 
 ![Screeny](https://i.imgur.com/OsRHJvT.png)
 
-## Communication
-
-* [GitHub](https://github.com/RooyyDoe/) — Main source of information, assignments, important dates, and more
-* [Slack](https://cmda-tech.slack.com/) — General chatter and Q&A
-* [Moodle](https://moodle.cmd.hva.nl/course/view.php?id=431) — Schedulers
-
 ## Installation
 
 **Clone the repository of the project**
@@ -42,6 +36,12 @@ npm run start
 ```
 localhost:3000 // host is now available
 ```
+
+## Communication
+
+* [GitHub](https://github.com/RooyyDoe/) — Main source of information, assignments, important dates, and more
+* [Slack](https://cmda-tech.slack.com/) — General chatter and Q&A
+* [Moodle](https://moodle.cmd.hva.nl/course/view.php?id=431) — Schedulers
 
 # License
 
