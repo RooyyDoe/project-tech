@@ -1,13 +1,15 @@
 body{
     background: linear-gradient(#000000, #434343);
+    background-repeat: no-repeat;
     font-family: 'Lato', sans-serif;
     text-decoration: none solid rgb(255, 255, 255);
     color: white;
-    margin: 7rem 0 0 0; 
+    margin: 0 auto;
   }
 
 main {
-  margin: 2rem 1rem 0 1rem;
+    max-width: 36rem;
+    margin: 2rem auto;
 }
 
   /* Standaard waarde van de H1 */
@@ -54,31 +56,25 @@ nav {
   z-index: 1;
   background-color: #191919;
   border-bottom: solid #2C7744;
-  position: fixed;
-  top: 0;
   width: 100%;
 }
 
 nav h1 {
   color: #2F7444;
   text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 article {
   border: solid;
 }
 
-#league_of_legends{
-  object-fit: cover;
-  max-height: 15rem;
-  width: 100%;
-}
-
 /* ###### Search bar ###### */
   
 .searchBar {
   width: 85%;
-  margin: 7rem auto 0rem;
+  margin: 1rem auto 0rem;
   display: block;
   border: 2px solid #2C7744;
   padding: 0.625rem;
@@ -94,8 +90,10 @@ article {
   /* #### Search tags #### */
   
   .tags {
+    width: 90%;
     list-style: none;
-    margin: 0.5rem 0 0 1.2rem;
+    display: block;
+    margin: 1rem auto 0rem;
     overflow: hidden; 
     padding: 0;
   }
@@ -127,14 +125,10 @@ article {
 
   /* ##### checkboxes ##### */
 
-  .nopad {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  /*image gallery*/
 
   ul { 
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0;
   }
 
   ul.checkboxen { 
@@ -144,10 +138,6 @@ article {
   ul.checkboxen li { 
     display: inline-table; 
     margin: 0.3rem
-  }
-
-  ul.checkboxen img { 
-    border: 2px dashed transparent;
   }
 
   ul.checkboxen input[type="checkbox"][id^="checkthis"] { 
@@ -163,15 +153,14 @@ article {
   /* ##### Aanpassen select vinkje ##### */
   ul.checkboxen label:before { 
     font-size: 15px; 
-    background-color: #ffffff; 
-    color: #0095ff; 
+    background: linear-gradient(to right, #2C7744, #5A3F37);
+    color: #ffffff; 
     content: ""; 
     display: block; 
     border-radius: 50%; 
-    border: 1px solid #0095ff; 
+    border: 1px solid #ffffff; 
     position: absolute; 
     top: -6px; 
-    right: -6px; 
     width: 25px; 
     height: 25px; 
     line-height: 25px; 
@@ -180,18 +169,34 @@ article {
     transform: scale(0);
   }
 
-  img {
+  section > img {
     object-fit: cover;
+    border-radius: 0.5rem;
     max-height: 40rem;
     object-position: top;
-    width: 100%;
+    display: block;
+    margin: 0.250rem auto;
+    width: 93%;
+  }
+
+  section > p {
+    object-fit: cover;
+    border-radius: 0.5rem;
+    max-height: 40rem;
+    object-position: top;
+    display: block;
+    margin: 2.5rem auto;
+    width: 93%;
   }
 
   ul.checkboxen label img { 
     object-fit: cover;
+    border-radius: 0.5rem;
     max-height: 40rem;
     object-position: top;
-    width: 100%;
+    display: block;
+    margin: 0.250rem auto;
+    width: 93%;
   }
 
   ul.checkboxen :checked + label:before { 
@@ -201,8 +206,9 @@ article {
   }
 
   button {
-    width: 98%;
-    margin: 0.4rem 0 2rem 0.4rem;
+    width: 93%;
+    display: block;
+    margin: 0 auto;
     padding: 1rem;
     font-family: 'Lato', sans-serif;
     font-size: 1.3rem;
@@ -212,10 +218,6 @@ article {
     color: white;
     cursor: pointer;
   }
-  
-  .help2 {
-    padding-bottom: 4rem;
-  }
 
 /* ##### Profile ##### */
   
@@ -223,3 +225,101 @@ article {
     border-radius: 10rem;
     width: 50%;
   }
+
+/** ##### media query ##### */
+
+@media screen and (min-width: 37.5em) {
+
+  .searchBar {
+    width: 61%;
+    margin: 1rem auto 0rem;
+    display: block;
+    border: 2px solid #2C7744;
+    padding: 0.625rem;
+    height: 1.25rem;
+    border-radius: 5px;
+    color: #AFAFAF;
+    }
+
+    .tags {
+      width: 63%;
+      list-style: none;
+      display: block;
+      margin: 1rem auto 0rem;
+      overflow: hidden; 
+      padding: 0;
+    }
+  
+}
+
+@media screen and (min-width: 56.25em) {
+  
+  .searchBar {
+    width: 45%;
+    margin: 1rem auto 0rem;
+    display: block;
+    border: 2px solid #2C7744;
+    padding: 0.625rem;
+    height: 1.25rem;
+    border-radius: 5px;
+    color: #AFAFAF;
+    }
+
+    .tags {
+      width: 47%;
+      list-style: none;
+      display: block;
+      margin: 1rem auto 0rem;
+      overflow: hidden; 
+      padding: 0;
+    }
+
+}
+
+@media screen and (min-width: 75em) {
+  
+  .searchBar {
+    width: 39%;
+    margin: 1rem auto 0rem;
+    display: block;
+    border: 2px solid #2C7744;
+    padding: 0.625rem;
+    height: 1.25rem;
+    border-radius: 5px;
+    color: #AFAFAF;
+    }
+
+    .tags {
+      width: 40%;
+      list-style: none;
+      display: block;
+      margin: 1rem auto 0rem;
+      overflow: hidden; 
+      padding: 0;
+  
+  }
+
+}
+
+@media (min-width: 112.5em) {
+
+  .searchBar {
+    width: 28%;
+    margin: 1rem auto 0rem;
+    display: block;
+    border: 2px solid #2C7744;
+    padding: 0.625rem;
+    height: 1.25rem;
+    border-radius: 5px;
+    color: #AFAFAF;
+    }
+
+    .tags {
+      width: 29%;
+      list-style: none;
+      display: block;
+      margin: 1rem auto 0rem;
+      overflow: hidden; 
+      padding: 0;
+    }
+}
