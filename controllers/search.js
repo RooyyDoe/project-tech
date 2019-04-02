@@ -1,3 +1,3 @@
-var express = require('express')
-var bodyParser = require('body-parser')
-var mongo = require('mongodb')
+var express = require('express');
+var bodyParser = require('body-parser');
+var mongod = require('mongodb');

@@ -67,6 +67,5 @@
         "space-unary-ops": 0,
         "spaced-comment": [1, "always"],
         "wrap-regex": 1
-
     }
 }

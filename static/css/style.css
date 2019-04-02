@@ -3,8 +3,12 @@ body{
     font-family: 'Lato', sans-serif;
     text-decoration: none solid rgb(255, 255, 255);
     color: white;
-    margin: 0;
+    margin: 7rem 0 0 0; 
   }
+
+main {
+  margin: 2rem 1rem 0 1rem;
+}
 
   /* Standaard waarde van de H1 */
 h1 {
@@ -58,10 +62,6 @@ nav {
 nav h1 {
   color: #2F7444;
   text-align: center;
-}
-
-section {
-  margin: 2rem 1rem 0 1rem;
 }
 
 article {
@@ -212,11 +212,14 @@ article {
     color: white;
     cursor: pointer;
   }
-
-  .help {
-    padding-top: 4rem;
-  }
   
   .help2 {
     padding-bottom: 4rem;
+  }
+
+/* ##### Profile ##### */
+  
+  .pimage {
+    border-radius: 10rem;
+    width: 50%;
   }

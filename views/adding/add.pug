@@ -1,13 +1,14 @@
 include ../partials/head.pug
+meta(http-equiv='refresh' content='3;url=/profile')
 body
   header
     nav
       h1 Games added!
   main
     section
-      .help 
       block content
-          if typeof data.gameTags === 'array'
+        if data.gameTags
+          if typeof data.gameTags === 'object'
             each game in data.gameTags
               p.test Game: #{game}
               //- Trimming white spaces from game data thats retrieved
@@ -20,6 +21,8 @@ body
             //- gets the data from data.js
             p Game: #{data.gameTags}
             img(src='../static/images/' + data.gameTags.replace('-', '_') + '.jpeg')
+        else 
+          p.error No Games Selected
       .help2
           
   include ../partials/footer.pug
