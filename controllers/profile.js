@@ -12,7 +12,20 @@ mongod.MongoClient.connect(url, { useNewUrlParser: true }, function connection(e
 });
 
 function profile(req, res) {
-	res.render('profile/profile.pug');
+	// Query that was made to find the profile with _id: 1
+	db.collection('profile').findOne({
+		_id: 1,
+		// Runs the done function after the query
+	}, done);
+	function done(err, data) {
+		if (err) {
+			next(err);
+		}
+		else {
+			// Giving data through with the res.render
+			res.render('profile/profile.pug', {data: data});
+		}
+	}
 }
 
 module.exports = profile;

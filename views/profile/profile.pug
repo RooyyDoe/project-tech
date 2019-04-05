@@ -2,10 +2,47 @@ include ../partials/head.pug
 body
   header
     nav
-      h1 profile
-  main.main
-    img.pimage(src='../static/images/ark.jpeg') 
-    
+      h1 Account
+  main
+    div(class='jumbo')
+    div(class='icons')
+      div(class='big-icon')
+      div(class='details')
+        h2 Leon Lucassen
+        p Gamer / Developer
+    .line
+    div(class='addmore')
+      h2 GameTags:
+      a(href='/')
+        img.change(src='../../static/icon/plus.svg')
+    block content
+      //- DUTCH EXPLAINATION:
+      //- data.gameTags is of een string wanneer er één game geselecteerd is, oof een array wanneer
+      //- er meerdere geselecteerd zijn. De length property zit zowel op teksten als op arrays. In
+      //- het eerste geval geeft het het aantal karakters terug. In het laatste geval de hoeveelheid
+      //- entries in de array. Door te checken op die lengte (0 is false, meer dan 0 is true) laat
+      //- je zien of de lengte van gameTags meer dan 0 is. Wanneer dit het geval is, is er of een
+      //- aantal karakters (één game aangevinkt) of meerdere entries in de array (meerdere games 
+      //- aangevinkt). Zo filter je dus of er games zijn. Eerst ging de code meteen naar de else als 
+      //- data.gameTags geen array was, waardoor je een kruisje zag terwijl er geen games waren 
+      //- geselecteerd.
+      if data.gameTags && data.gameTags.length
+        //- checking if data.gameTags is an array. If yes: then several games have been selected.
+        if typeof data.gameTags === 'object'
+          //- loops through the array
+          each game in data.gameTags
+            div(class='del')
+              p.games #{game}
+              a#gone(class='remove' href='/profile', data-name=game)
+                img.remove(src='../../static/icon/delete.svg')
+        //- data.gameTags is not an array, so only one game is selected. There is no need to loop.
+        else
+          //- gets the data from data.js
+          div(class='del')
+            p #{data.gameTags}
+            a.button#gone(href='/profile', data-name=data.gameTags)
+              img.remove(src='../../static/icon/delete.svg')
+      
           
   include ../partials/footer.pug
 

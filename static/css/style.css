@@ -220,11 +220,74 @@ article {
   }
 
 /* ##### Profile ##### */
+
+  .jumbo {
+		width: 100%;
+    height: 25rem;
+    margin-top: -2rem;
+		background: url(https://i1.wp.com/unscripted360.com/wp-content/uploads/2018/09/d4603f6c7a78e2cb39884337f85415bf.jpg?w=1080&ssl=1) center center no-repeat;
+    background-size: cover;
+    border-bottom: solid #2C7744;
+	}
   
-  .pimage {
-    border-radius: 10rem;
-    width: 50%;
+	.big-icon {
+			width: 11.25rem;
+      height: 11.25rem;
+      display: block;
+			background: url(https://images.unsplash.com/photo-1546294355-f451dca2e59d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80) center top;
+			background-size: 120%;
+			border-radius: 50%;
+			border: solid #2C7744;
+      margin: -5.625rem auto;
+		}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+    margin-bottom: 50px;
+    margin-top: 5.625rem;
+  }	
+  
+	h3 {
+			color: #ffffff;
+			font-size: 28px;
+			margin-top: 15px;
+	}
+		
+	p {
+			color: #ffffff;
+			margin-top: 0px;
   }
+
+  .change {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .remove {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .addmore {
+    margin: 1.5rem;
+    display: flex;
+		flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .del {
+    margin: 0 1.5rem;
+    display: flex;
+		flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
 
 /** ##### media query ##### */
 

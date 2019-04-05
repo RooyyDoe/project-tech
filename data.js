@@ -37,6 +37,7 @@ express()
 	.get('/profile', profile)
 	.get('/:id', overview)
 	.post('/', add)
+	.delete('/:gname', remove)
 	.use(notFound)
 	.listen(3000);
 
