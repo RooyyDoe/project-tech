@@ -1,0 +1,65 @@
+include ../partials/head.pug
+body
+  header
+    nav
+      h1 GameFinder
+    include ../search/search.pug
+  main
+    section
+      form(method='POST' action='/')
+        ul.checkboxen
+          li.gameList
+            input#checkthis1(type='checkbox' name='game' value='league-of-legends')
+            label(for='checkthis1')
+              img(alt='test' src='../static/images/league_of-legends.jpeg')
+          li.gameList
+            input#checkthis2(type='checkbox' name='game' value='Apex-Legends')
+            label(for='checkthis2')
+              img(src='../static/images/apex_legends.jpeg')
+          li.gameList
+            input#checkthis3(type='checkbox' name='game' value='Fortnite')
+            label(for='checkthis3')
+              img(src='../static/images/fortnite.jpeg')
+          li.gameList
+            input#checkthis4(type='checkbox' name='game' value='Rocket-League')
+            label(for='checkthis4')
+              img(src='../static/images/rocket_league.jpeg')
+          li.gameList
+            input#checkthis5(type='checkbox' name='game' value='Call-of-Duty-Black-ops-4')
+            label(for='checkthis5')
+              img(src='../static/images/call_of_duty.jpeg')
+          li.gameList
+            input#checkthis6(type='checkbox' name='game' value='Minecraft')
+            label(for='checkthis6')
+              img(src='../static/images/minecraft.jpeg')
+          li.gameList
+            input#checkthis7(type='checkbox' name='game' value='Tom-Clancys-Rainbow-Six-Siege')
+            label(for='checkthis7')
+              img(src='../static/images/rainbow-six.png') 
+          li.gameList
+            input#checkthis8(type='checkbox' name='game' value='Destiny-2')
+            label(for='checkthis8')
+              img(src='../static/images/destiny_2.jpeg') 
+          li.gameList
+            input#checkthis9(type='checkbox' name='game' value='Gta-V')
+            label(for='checkthis9')
+              img(src='../static/images/gta_v.jpeg') 
+          li.gameList
+            input#checkthis10(type='checkbox' name='game' value='Ark-Survival')
+            label(for='checkthis10')
+              img(src='../static/images/ark.jpeg') 
+          li.gameList
+            input#checkthis11(type='checkbox' name='game' value='Red-Dead-Redemtion-2')
+            label(for='checkthis11')
+              img(src='../static/images/red_dead-redemtion-2.jpeg')  
+          li.gameList
+            input#checkthis12(type='checkbox' name='game' value='Pubg')
+            label(for='checkthis12')
+              img(src='../static/images/pubg.jpeg')   
+        button.addtag Add tags to your profile!
+  include ../partials/footer.pug
+  script(type='text/javascript' src='../static/js/intersection.js')
+        
+      
+        
+          

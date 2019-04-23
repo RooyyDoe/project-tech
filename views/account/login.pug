@@ -1,0 +1,14 @@
+include ../partials/head.pug
+body
+  header
+    nav
+      h1 GameMate
+  main
+    block content
+    section.viewport
+      h1 Welcome!
+        form.loginform(method='POST', action='')
+          input.login(type='text' placeholder='Username' name='name')
+          input.login(type='password' placeholder='Password' name='password')
+          button.loginbutton(type='submit') Login
+          a(href="/") Cancel

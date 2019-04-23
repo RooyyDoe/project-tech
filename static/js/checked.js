@@ -11,7 +11,7 @@ for(var i = 0; i < gameList.length; i++) {
 	// Another check for the crosses to be sure
 	if(remove.length) {
 		// add the event handler for each cross. All the crosses needs to be looped
-		// over so that its not only one. Error fixed by changing it up to class
+		// over so that 	its not only one. Error fixed by changing it up to class
 		// instead of IDs.
 		remove[0].addEventListener('click', onremove);
 	}			

@@ -47,6 +47,8 @@ p {
   font-weight: 400;
 }
 
+/* ##### Nav ##### */
+
 .notfound {
   margin-top: 20rem;
   text-align: center;
@@ -54,6 +56,7 @@ p {
 
 nav {
   z-index: 1;
+  text-align: center;
   background-color: #191919;
   border-bottom: solid #2C7744;
   width: 100%;
@@ -68,6 +71,92 @@ nav h1 {
 
 article {
   border: solid;
+}
+
+/* ##### Mainpage ##### */
+
+.viewport {
+  height: 60vh;
+  margin-top: 20em;
+  text-align: center;
+}
+
+.account {
+  text-align: center;
+  text-decoration: none;
+  width: 80%;
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: #191919;
+  border: 0.1rem solid #2C7744;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ###### login ###### */
+
+.loginpage {
+  text-align: center;
+  height: 70vh;
+  margin-top: 10em;
+  color: #2F7444;
+}
+
+.loginform {
+  margin: 20px 0;
+}
+
+.loginform a {
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  font-size: 1rem;
+}
+	
+.login{
+		display: block;
+    border: 0.2rem solid #2C7744;
+    background-color: #191919;
+    width: 50%;
+		border-radius: 3px;
+		padding: 10px 15px;
+		margin: 0 auto 10px auto;
+		text-align: center;
+		font-size: 18px;
+		color: white;
+    font-weight: 300;
+		transition-duration: 0.25s;
+  }
+
+.login:hover {
+  background-color: #191919;
+}
+
+.login:focus {
+  background-color: #191919;
+  width: 300px;
+}
+
+.loginbutton{
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 10px 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: #191919;
+  border: 0.1rem solid #2C7744;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
 }
 
 /* ###### Search bar ###### */
@@ -125,6 +214,16 @@ article {
 
   /* ##### checkboxes ##### */
 
+  .js-enabled .gameList {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: .5s ease-in;
+  }
+
+  .js-enabled .visible {
+    opacity: 1;
+    transform: scale(1);
+  }
 
   ul { 
     margin: 0; 
@@ -205,7 +304,7 @@ article {
     z-index: 0;
   }
 
-  button {
+  .addtag {
     width: 93%;
     display: block;
     margin: 0 auto;

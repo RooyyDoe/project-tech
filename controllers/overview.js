@@ -13,11 +13,17 @@ mongod.MongoClient.connect(url, { useNewUrlParser: true }, function connection(e
 
 // Function made for getting the data that was added to the database with the first function
 function overview(req, res, next) {
+	if (req.session.user) {
 	// Query that was made to find the profile with _id: 1
-	db.collection('profile').findOne({
-		_id: 1,
+		db.collection('profile').findOne({
+			_id: 1,
 		// Runs the done function after the query
-	}, done);
+		}, done);
+	}
+	else {
+		res.status(401).render('account/credsrequired.pug');
+	}
+
 	function done(err, data) {
 		console.log(data);
 		if (err) {

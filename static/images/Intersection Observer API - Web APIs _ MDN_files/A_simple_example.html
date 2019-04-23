@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)https://mdn.mozillademos.org/en-US/docs/Web/API/Intersection_Observer_API$samples/A_simple_example?revision=1530736 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <link href="./samples.37902ba3b7fe.css" rel="stylesheet" type="text/css">
+        
+        <style type="text/css">
+            #box {
+  background-color: rgba(40, 40, 190, 255);
+  border: 4px solid rgb(20, 20, 120);
+  transition: background-color 1s, border 1s;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.vertical {
+  color: white;
+  font: 32px "Arial";
+}
+
+.extra {
+  width: 350px;
+  height: 350px;
+  margin-top: 10px;
+  border: 4px solid rgb(20, 20, 120);
+  text-align: center;
+  padding: 20px;
+}
+        </style>
+        
+        <title>Intersection Observer API - A_simple_example - code sample</title>
+    </head>
+    <body>
+        
+            <div id="box" style="background-color: rgba(190, 40, 40, 0);">
+  <div class="vertical">
+    Welcome to <strong>The Box!</strong>
+  </div>
+</div>
+        
+        
+            <script>
+                var numSteps = 20.0;
+
+var boxElement;
+var prevRatio = 0.0;
+var increasingColor = "rgba(40, 40, 190, ratio)";
+var decreasingColor = "rgba(190, 40, 40, ratio)";
+
+// Set things up.
+
+window.addEventListener("load", function(event) {
+  boxElement = document.querySelector("#box");
+
+  createObserver();
+}, false); function createObserver() {
+  var observer;
+
+  var options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: buildThresholdList()
+  };
+
+  observer = new IntersectionObserver(handleIntersect, options);
+  observer.observe(boxElement);
+} function buildThresholdList() {
+  var thresholds = [];
+  var numSteps = 20;
+
+  for (var i=1.0; i<=numSteps; i++) {
+    var ratio = i/numSteps;
+    thresholds.push(ratio);
+  }
+
+  thresholds.push(0);
+  return thresholds;
+} function handleIntersect(entries, observer) {
+  entries.forEach(function(entry) {
+    if (entry.intersectionRatio > prevRatio) {
+      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+    } else {
+      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+    }
+
+    prevRatio = entry.intersectionRatio;
+  });
+}
+            </script>
+        
+    
+</body></html>
