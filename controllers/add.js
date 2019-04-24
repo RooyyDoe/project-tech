@@ -12,7 +12,7 @@ mongod.MongoClient.connect(url, { useNewUrlParser: true }, function connection(e
 });
 
 // Function made for adding the chosen gameTags to the database tabel
-function add(req, res, next) {
+function addGameTag(req, res, next) {
 	if (req.session.user) {
 		// Query made for updating a attribute in the "profile" tabel
 		db.collection('profile').updateOne(
@@ -36,4 +36,4 @@ function add(req, res, next) {
 	}
 }
 
-module.exports = add;
+module.exports = addGameTag;

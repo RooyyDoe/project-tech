@@ -23,7 +23,7 @@ mongod.MongoClient.connect(url, { useNewUrlParser: true }, function connection(e
 
 // Require controllers
 
-var add = require('./controllers/add.js');
+var addGameTag = require('./controllers/add.js');
 var overview = require('./controllers/overview.js');
 var profile = require('./controllers/profile.js');
 var remove = require('./controllers/remove.js');
@@ -58,7 +58,7 @@ express()
 	// Profile
 	.get('/profile', profile)
 	.get('/:id', overview)
-	.post('/', add)
+	.post('/', addGameTag)
 	.delete('/:gname', remove)
 	// 404 page
 	.use(notFound)
