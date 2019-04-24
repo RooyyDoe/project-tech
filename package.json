@@ -4,7 +4,7 @@
   "description": "Dating website to find your gamer buddy",
   "main": "data.js",
   "scripts": {
-    "start": "nodemon data.js",
+    "start": "data.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
