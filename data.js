@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 // Bronnen:
 // https://github.com/cmda-bt/be-course-18-19
 // https://docs.mongodb.com/meta/
@@ -12,13 +13,13 @@ require('dotenv').config();
 
 // Intialize connection to MongoDB database
 var db = null;
-var url = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT;
+var url = process.env.MONGODB_URI;
 
-mongod.MongoClient.connect(url, { useNewUrlParser: true }, function connection(err, client) {
-	if (err) {
-		console.log('Sorry, connection failed', err);
-	}
-	db = client.db(process.env.DB_NAME);
+mongod.MongoClient.connect(url, {
+	useNewUrlParser: true,
+}, function(err, client) {
+	if (err) {throw err;}
+	db = client.db('GameMate');
 });
 
 // Require controllers

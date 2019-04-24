@@ -1,14 +1,17 @@
+/* eslint-disable func-names */
 var mongod = require('mongodb');
+
+require('dotenv').config();
 
 // Database information
 var db = null;
-var url = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT;
+var url = process.env.MONGODB_URI;
 
-mongod.MongoClient.connect(url, { useNewUrlParser: true }, function connection(err, client) {
-	if (err) {
-		throw err;
-	}
-	db = client.db(process.env.DB_NAME);
+mongod.MongoClient.connect(url, {
+	useNewUrlParser: true,
+}, function(err, client) {
+	if (err) {throw err;}
+	db = client.db('GameMate');
 });
 
 function renderLogin(req, res, data) {

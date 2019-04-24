@@ -30,8 +30,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "gulp": "^4.0.0",
-    "gulp-pug": "^4.0.1",
-    "nodemon": "^1.18.10"
+    "gulp-pug": "^4.0.1"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -40,6 +39,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "express-sessions": "^1.0.6",
+    "heroku": "^7.22.10",
     "locus": "^2.0.1",
     "lodash": "^4.17.11",
     "mongodb": "^3.2.2",
