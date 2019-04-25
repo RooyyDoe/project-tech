@@ -63,7 +63,7 @@ express()
 	.delete('/:gname', remove)
 	// 404 page
 	.use(notFound)
-	.listen(3000);
+	.listen(process.env.PORT || 3000)
 
 function home(req, res) {
 	res.render('adding/index.pug');
